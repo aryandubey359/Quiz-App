@@ -8,32 +8,43 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
-    <div class="quizcontainer" id="quizcontainer">
-      <div class="question">
-        <h2 id="question">Question Text</h2>
-        <div class="answer">
-          <ul>
-            <li>
-              <input type="radio" name="answer" id="a" />
-              <label for="a" id="optiona">Option A</label>
-            </li>
-            <li>
-              <input type="radio" name="answer" id="b" />
-              <label for="b" id="optionb">Option B</label>
-            </li>
-            <li>
-              <input type="radio" name="answer" id="c" />
-              <label for="c" id="optionc">Option C</label>
-            </li>
-            <li>
-              <input type="radio" name="answer" id="d" />
-              <label for="d" id="optiond">Option D</label>
-            </li>
-          </ul>
-        </div>
+    <div class="inputcontainer" id="inputcontainer">
+      <h2>Quick Quiz</h2>
+      <div class="name" id="">
+        <label for="name">Enter your Name: </label>
+        <input type="text" name="name" id="name" required />
       </div>
-      <div class="submit" id="submit">
-        <button id="button">Next</button>
+      <a href="#" id="anchor"><button id="button1">Start Quiz</button></a>
+    </div>
+    <div class="quizcontainer hidden" id="quizcontainer">
+      <div class="progresscontainer" id="progresscontainer"></div>
+      <div class="leftprogress" id="leftprogress">
+        <div class="question">
+          <h2 id="question">Question Text</h2>
+          <div class="answer">
+            <ul>
+              <li>
+                <input type="radio" name="answer" id="a" />
+                <label for="a" id="optiona">Option A</label>
+              </li>
+              <li>
+                <input type="radio" name="answer" id="b" />
+                <label for="b" id="optionb">Option B</label>
+              </li>
+              <li>
+                <input type="radio" name="answer" id="c" />
+                <label for="c" id="optionc">Option C</label>
+              </li>
+              <li>
+                <input type="radio" name="answer" id="d" />
+                <label for="d" id="optiond">Option D</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="submit" id="submit">
+          <button id="button">Next</button>
+        </div>
       </div>
     </div>
   </body>

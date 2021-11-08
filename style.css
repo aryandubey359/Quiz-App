@@ -14,6 +14,94 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.inputcontainer {
+  /* margin-left: 77px; */
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: honeydew;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 35vw;
+  height: 30vh;
+  overflow: hidden;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputcontainer.hidden {
+  /* margin-left: 77px; */
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  flex-direction: column;
+  background-color: honeydew;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 35vw;
+  height: 30vh;
+  overflow: hidden;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inputcontainer h2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+  text-decoration: underline;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+input {
+  font-family: inherit;
+  size: 1rem;
+  border-radius: 5px;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+label {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.inputcontainer button {
+  display: flex;
+  background-color: #8e44ad;
+  color: white;
+  display: block;
+  width: 30%;
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.inputcontainer button:hover {
+  background-color: #53066e;
+}
+.inputcontainer a{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
 .quizcontainer {
   /* display: flex;
   align-items: center;
@@ -27,6 +115,28 @@ body {
   overflow: hidden;
   font-size: 1.2rem;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quizcontainer.hidden{
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+  background-color: honeydew;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 60vw;
+  height: 45vh;
+  overflow: hidden;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.progresscontainer{
+  background-color: red;
+  width: 0%;
+  height: 10px;
 }
 .question {
   font-size: 1.5rem;

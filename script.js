@@ -52,9 +52,28 @@ const answerB = document.getElementById("b");
 const answerC = document.getElementById("c");
 const answerD = document.getElementById("d");
 const quiz = document.getElementById("quizcontainer");
+const progress = document.getElementById("progresscontainer");
+const leftprogress = document.getElementById("leftprogress");
 let currentQuestion = 0;
 let score = 0;
 let correct = 0;
+let counter = 0;
+let pwidth = 0;
+let button1 = document.getElementById("button1");
+let anchor = document.getElementById("anchor");
+let name;
+
+button1.addEventListener("click", () => {
+  if (document.getElementById("name").value != "") {
+    name = document.getElementById("name").value;
+    document.getElementById("inputcontainer").classList.add("hidden");  
+    document.getElementById("quizcontainer").classList.remove("hidden");
+  }
+  else{
+      alert("Please fill in your Name!");
+  }
+});
+
 
 function checkSelected() {
   if (
@@ -70,7 +89,7 @@ function checkSelected() {
       button.innerText = "Submit";
       loadQuiz();
     } else if (button.innerText == "Submit") {
-      quiz.innerHTML = "<h1>Congratulations on Successfully completing the Quiz! Your got " + correct + " Questions right out of 5. Your score is: " + score + "/50.</h1>";
+      leftprogress.innerHTML = "<h1>Congratulations " + name + ". You have successfully completed the Quiz! You got " + correct + " Questions right out of " + quizQuestions.length + ". Your score is: " + score + "/" + 10*(quizQuestions.length) + ".</h1>";
       console.log(score);
     } else {
       loadQuiz();
@@ -118,6 +137,22 @@ function checkAnswer() {
 }
 
 submit.addEventListener("click", () => {
+  counter ++;
+  if(counter == 1){
+    progress.style.width = "20%";  
+  }
+  else if(counter == 2){
+    progress.style.width = "40%";  
+  }
+  else if(counter == 3){
+    progress.style.width = "60%";  
+  }
+  else if(counter == 4){
+    progress.style.width = "80%";  
+  }
+  else if(counter == 5){
+    progress.style.width = "100%";  
+  }
   checkAnswer();
 });
 
